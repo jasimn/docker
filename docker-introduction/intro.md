@@ -77,4 +77,55 @@ Use Docker when you want to:
 | **Learning/Training**  | Share identical environments with team |
 
 ---
+## docker container creation
 
+# Docker Run Options Guide
+
+This repository provides a reference for commonly used Docker `run` command options to help you configure and manage Docker containers effectively. Below is a table of key options, their descriptions, and examples to demonstrate their usage.
+
+## Overview
+
+Docker is a platform for developing, shipping, and running applications inside containers. The `docker run` command is used to create and start a container from a Docker image. By using various options, you can customize the container's behavior, such as networking, resource limits, and volume mounts.
+
+## Docker Run Options
+
+The following table lists common `docker run` options, their descriptions, and example usage:
+
+| Option                     | Description                                                     | Example                              |
+|----------------------------|-----------------------------------------------------------------|--------------------------------------|
+| `--name`                   | Assign a name to the container                                  | `--name myapp`                       |
+| `-d`                       | Run in detached (background) mode                               | `-d`                                 |
+| `-p`                       | Publish container port to host                                  | `-p 8080:80`                         |
+| `-P`                       | Publish all exposed ports to random ports                       | `-P`                                 |
+| `-v`                       | Mount a volume (bind mount)                                     | `-v /data:/app/data`                 |
+| `--volume-driver`          | Specify a volume driver                                         | `--volume-driver local`              |
+| `--volumes-from`           | Mount volumes from another container                            | `--volumes-from dbcontainer`         |
+| `-e`                       | Set environment variables                                       | `-e ENV=production`                  |
+| `--env-file`               | Load environment variables from a file                          | `--env-file .env`                    |
+| `--add-host`               | Add custom host-to-IP mapping                                   | `--add-host mydb:192.168.1.10`       |
+| `--dns`                    | Set custom DNS servers                                          | `--dns 8.8.8.8`                      |
+| `-h`, `--hostname`         | Set container hostname                                          | `-h mycontainer`                     |
+| `-w`, `--workdir`          | Set working directory inside container                          | `-w /usr/src/app`                    |
+| `--entrypoint`             | Override image’s default ENTRYPOINT                             | `--entrypoint "/bin/bash"`           |
+| `--restart`                | Restart policy (`no`, `on-failure`, `always`, `unless-stopped`) | `--restart=always`                   |
+| `--read-only`              | Mount root filesystem as read-only                              | `--read-only`                        |
+| `--privileged`             | Give extended privileges to the container                       | `--privileged`                       |
+| `--cpu-shares`             | Set CPU priority (relative weight)                              | `--cpu-shares=512`                   |
+| `--cpuset-cpus`            | Limit CPUs available to the container                           | `--cpuset-cpus="0,1"`                |
+| `-m`, `--memory`           | Limit container memory usage                                    | `--memory=512m`                      |
+| `--memory-swap`            | Set total memory + swap limit                                   | `--memory-swap=1g`                   |
+| `--oom-kill-disable`       | Disable Out-Of-Memory killer                                    | `--oom-kill-disable`                 |
+| `--cap-add` / `--cap-drop` | Add or remove Linux capabilities                                | `--cap-add=NET_ADMIN`                |
+| `-u`, `--user`             | Run container as specific user                                  | `-u 1000:1000`                       |
+| `-t`                       | Allocate a pseudo-TTY                                           | `-t`                                 |
+| `-i`                       | Keep STDIN open (interactive mode)                              | `-i`                                 |
+| `--attach`                 | Attach to STDIN/STDOUT/STDERR                                   | `--attach stdout`                    |
+| `--log-driver`             | Specify logging driver                                          | `--log-driver=json-file`             |
+| `--security-opt`           | Set security options (AppArmor, SELinux, etc.)                  | `--security-opt apparmor=unconfined` |
+
+## Example Usage
+
+Here’s an example of a `docker run` command that incorporates several options from the table:
+
+```bash
+docker run -d --name myapp -p 8080:80 -v /data:/app/data -e ENV=production --restart=always nginx
