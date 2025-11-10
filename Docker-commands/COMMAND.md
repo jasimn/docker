@@ -10,46 +10,45 @@
  --------------
 --------------------------------
  
-docker attach - Attach local standard input/output to a running container
+## 1.docker attach - Attach local standard input/output to a running container
 
 ```bash
 docker attach <container>
 ```
-B
-docker build - Build an image from a Dockerfile
+
+## 2. docker build - Build an image from a Dockerfile
 
 ```bash
 docker build -t my-image .
 ```
-C
-docker commit - Create a new image from a container's changes
+
+## 3.docker commit - Create a new image from a container's changes
 
 ```bash
 docker commit <container> new-image
 ```
-docker cp - Copy files/folders between container and local filesystem
+## 4. docker cp - Copy files/folders between container and local filesystem
 
 ```bash
 docker cp <container>:/path /local/path
 ```
-docker create - Create a new container without starting it
+## 5. docker create - Create a new container without starting it
 
 ```bash
 docker create --name my-container nginx
 ```
-D
-docker diff - Inspect changes to files/directories on a container's filesystem
+## 6.docker diff - Inspect changes to files/directories on a container's filesystem
 
 ```bash
 docker diff <container>
 ```
-E
-docker events - Get real-time events from the server
+
+## 7. docker events - Get real-time events from the server
 
 ```bash
 docker events
 ```
-docker exec - Run a command in a running container
+## 8.docker exec - Run a command in a running container
 
 ```bash
 docker exec -it <container> bash
