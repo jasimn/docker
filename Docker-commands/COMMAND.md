@@ -1,4 +1,5 @@
-# Docker basics:
+# **Docker commands**
+
 | Command          | Description                     |
 | ---------------- | ------------------------------- |
 | `docker version` | Show Docker version information |
@@ -7,63 +8,75 @@
 | `docker logout`  | Log out from a Docker registry  |
 | `docker help`    | Show help for any command       |
  --------------
-
+--------------------------------
  
 docker attach - Attach local standard input/output to a running container
 
-bash
+```bash
 docker attach <container>
+```
 B
 docker build - Build an image from a Dockerfile
 
-bash
+```bash
 docker build -t my-image .
+```
 C
 docker commit - Create a new image from a container's changes
 
-bash
+```bash
 docker commit <container> new-image
+```
 docker cp - Copy files/folders between container and local filesystem
 
-bash
+```bash
 docker cp <container>:/path /local/path
+```
 docker create - Create a new container without starting it
 
-bash
+```bash
 docker create --name my-container nginx
+```
 D
 docker diff - Inspect changes to files/directories on a container's filesystem
 
-bash
+```bash
 docker diff <container>
+```
 E
 docker events - Get real-time events from the server
 
-bash
+```bash
 docker events
+```
 docker exec - Run a command in a running container
 
-bash
+```bash
 docker exec -it <container> bash
+```
 docker export - Export a container's filesystem as a tar archive
 
-bash
+```bash
 docker export <container> > container.tar
+```
 F
 docker history - Show the history of an image
 
-bash
+```bash
 docker history <image>
+```
 H
 docker help - Show help for any Docker command
 
-bash
+```bash
 docker help <command>
+```
 I
 docker images - List images
 
-bash
+```bash
 docker images
+```
 docker import - Import the contents from a tarball to create a filesystem image
 
 bash
