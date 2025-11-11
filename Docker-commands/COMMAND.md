@@ -81,25 +81,26 @@ docker images
 ```bash
 docker import container.tar new-image
 ```
-docker info - Display system-wide information
+## 14.docker info - Display system-wide information
 
-bash
+```bash
 docker info
-docker inspect - Return low-level information on Docker objects
-
-bash
+```
+## 15. docker inspect - Return low-level information on Docker objects
+```bash
 docker inspect <container>
-K
-docker kill - Kill one or more running containers
+```
+## 16.docker kill - Kill one or more running containers
 
-bash
+```bash
 docker kill <container>
-L
-docker load - Load an image from a tar archive or STDIN
+```
+## 17. docker load - Load an image from a tar archive or STDIN
 
-bash
+```bash
 docker load -i image.tar
-docker login - Log in to a Docker registry
+```
+## 18. docker login - Log in to a Docker registry
 
 bash
 docker login
