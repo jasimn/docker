@@ -53,33 +53,34 @@ docker events
 ```bash
 docker exec -it <container> bash
 ```
-docker export - Export a container's filesystem as a tar archive
+## 9 docker export - Export a container's filesystem as a tar archive
 
 ```bash
 docker export <container> > container.tar
 ```
-F
-docker history - Show the history of an image
+
+## 10. docker history - Show the history of an image
 
 ```bash
 docker history <image>
 ```
-H
-docker help - Show help for any Docker command
+
+## 11. docker help - Show help for any Docker command
 
 ```bash
 docker help <command>
 ```
-I
-docker images - List images
+
+## 12. docker images - List images
 
 ```bash
 docker images
 ```
-docker import - Import the contents from a tarball to create a filesystem image
+## 13.docker import - Import the contents from a tarball to create a filesystem image
 
-bash
+```bash
 docker import container.tar new-image
+```
 docker info - Display system-wide information
 
 bash
