@@ -101,89 +101,105 @@ docker kill <container>
 docker load -i image.tar
 ```
 ## 18. docker login - Log in to a Docker registry
-
-bash
+```bash
 docker login
-docker logout - Log out from a Docker registry
+```
+## 19.docker logout - Log out from a Docker registry
 
-bash
+```bash
 docker logout
-docker logs - Fetch the logs of a container
+```
+## 20.docker logs - Fetch the logs of a container
 
-bash
+```bash
 docker logs <container>
-N
-docker network - Manage networks
+```
+## 21.docker network - Manage networks
 
-bash
+```bash
 docker network ls
 docker network create my-network
 docker network inspect my-network
-P
-docker pause - Pause all processes within one or more containers
+```
+## 22.docker pause - Pause all processes within one or more containers
 
-bash
+```bash
 docker pause <container>
-docker port - List port mappings or a specific mapping for the container
-
-bash
+```
+## 23.docker port - List port mappings or a specific mapping for the container
+```bash
 docker port <container>
-docker ps - List containers
+```
+## 24.docker ps - List containers
 
-bash
+```bash
 docker ps          # Running containers
 docker ps -a       # All containers
-docker pull - Pull an image or a repository from a registry
+```
+## 25. docker pull - Pull an image or a repository from a registry
 
-bash
+```bash
 docker pull nginx
-docker push - Push an image or a repository to a registry
+```
+## 26. docker push - Push an image or a repository to a registry
 
-bash
+```bash
 docker push my-image
-R
-docker rename - Rename a container
+```
 
-bash
+## 27.docker rename - Rename a container
+
+```bash
 docker rename old-name new-name
-docker restart - Restart one or more containers
+```
+## 28.docker restart - Restart one or more containers
 
-bash
+```bash
 docker restart <container>
-docker rm - Remove one or more containers
+```
+## 29.docker rm - Remove one or more containers
 
-bash
+```bash
 docker rm <container>
-docker rm $(docker ps -aq)  # Remove all containers
-docker rmi - Remove one or more images
-
-bash
+```
+# 30. Remove all containers
+```bash
+docker rm $(docker ps -aq)
+```
+# 31. Remove images
+```bash
 docker rmi <image>
-docker run - Run a command in a new container
+```
+## 32.docker run - Run a command in a new container
 
-bash
+```bash
 docker run -d -p 80:80 --name my-nginx nginx
-S
-docker save - Save one or more images to a tar archive
+```
+## 33.docker save - Save one or more images to a tar archive
 
-bash
+```bash
 docker save -o image.tar <image>
-docker search - Search Docker Hub for images
+```
+## 34.docker search - Search Docker Hub for images
 
-bash
+```bash
 docker search nginx
-docker start - Start one or more stopped containers
+```
+## 35.docker start - Start one or more stopped containers
 
-bash
+```bash
 docker start <container>
-docker stats - Display a live stream of container(s) resource usage statistics
+```
+## 36.docker stats - Display a live stream of container(s) resource usage statistics
 
-bash
+```bash
 docker stats
-docker stop - Stop one or more running containers
+```
+## 37.docker stop - Stop one or more running containers
 
-bash
+```bash
 docker stop <container>
+```
 T
 docker tag - Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
 
