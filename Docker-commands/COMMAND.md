@@ -10,154 +10,154 @@
  --------------
 --------------------------------
  
-## 1.docker attach - Attach local standard input/output to a running container
+# 1.docker attach - Attach local standard input/output to a running container
 
 ```bash
 docker attach <container>
 ```
 
-## 2. docker build - Build an image from a Dockerfile
+# 2. docker build - Build an image from a Dockerfile
 
 ```bash
 docker build -t my-image .
 ```
 
-## 3.docker commit - Create a new image from a container's changes
+# 3.docker commit - Create a new image from a container's changes
 
 ```bash
 docker commit <container> new-image
 ```
-## 4. docker cp - Copy files/folders between container and local filesystem
+# 4. docker cp - Copy files/folders between container and local filesystem
 
 ```bash
 docker cp <container>:/path /local/path
 ```
-## 5. docker create - Create a new container without starting it
+# 5. docker create - Create a new container without starting it
 
 ```bash
 docker create --name my-container nginx
 ```
-## 6.docker diff - Inspect changes to files/directories on a container's filesystem
+# 6.docker diff - Inspect changes to files/directories on a container's filesystem
 
 ```bash
 docker diff <container>
 ```
 
-## 7. docker events - Get real-time events from the server
+# 7. docker events - Get real-time events from the server
 
 ```bash
 docker events
 ```
-## 8.docker exec - Run a command in a running container
+# 8.docker exec - Run a command in a running container
 
 ```bash
 docker exec -it <container> bash
 ```
-## 9 docker export - Export a container's filesystem as a tar archive
+# 9 docker export - Export a container's filesystem as a tar archive
 
 ```bash
 docker export <container> > container.tar
 ```
 
-## 10. docker history - Show the history of an image
+# 10. docker history - Show the history of an image
 
 ```bash
 docker history <image>
 ```
 
-## 11. docker help - Show help for any Docker command
+# 11. docker help - Show help for any Docker command
 
 ```bash
 docker help <command>
 ```
 
-## 12. docker images - List images
+# 12. docker images - List images
 
 ```bash
 docker images
 ```
-## 13.docker import - Import the contents from a tarball to create a filesystem image
+# 13.docker import - Import the contents from a tarball to create a filesystem image
 
 ```bash
 docker import container.tar new-image
 ```
-## 14.docker info - Display system-wide information
+# 14.docker info - Display system-wide information
 
 ```bash
 docker info
 ```
-## 15. docker inspect - Return low-level information on Docker objects
+# 15. docker inspect - Return low-level information on Docker objects
 ```bash
 docker inspect <container>
 ```
-## 16.docker kill - Kill one or more running containers
+# 16.docker kill - Kill one or more running containers
 
 ```bash
 docker kill <container>
 ```
-## 17. docker load - Load an image from a tar archive or STDIN
+# 17. docker load - Load an image from a tar archive or STDIN
 
 ```bash
 docker load -i image.tar
 ```
-## 18. docker login - Log in to a Docker registry
+# 18. docker login - Log in to a Docker registry
 ```bash
 docker login
 ```
-## 19.docker logout - Log out from a Docker registry
+# 19.docker logout - Log out from a Docker registry
 
 ```bash
 docker logout
 ```
-## 20.docker logs - Fetch the logs of a container
+# 20.docker logs - Fetch the logs of a container
 
 ```bash
 docker logs <container>
 ```
-## 21.docker network - Manage networks
+# 21.docker network - Manage networks
 
 ```bash
 docker network ls
 docker network create my-network
 docker network inspect my-network
 ```
-## 22.docker pause - Pause all processes within one or more containers
+# 22.docker pause - Pause all processes within one or more containers
 
 ```bash
 docker pause <container>
 ```
-## 23.docker port - List port mappings or a specific mapping for the container
+# 23.docker port - List port mappings or a specific mapping for the container
 ```bash
 docker port <container>
 ```
-## 24.docker ps - List containers
+# 24.docker ps - List containers
 
 ```bash
 docker ps          # Running containers
 docker ps -a       # All containers
 ```
-## 25. docker pull - Pull an image or a repository from a registry
+# 25. docker pull - Pull an image or a repository from a registry
 
 ```bash
 docker pull nginx
 ```
-## 26. docker push - Push an image or a repository to a registry
+# 26. docker push - Push an image or a repository to a registry
 
 ```bash
 docker push my-image
 ```
 
-## 27.docker rename - Rename a container
+# 27.docker rename - Rename a container
 
 ```bash
 docker rename old-name new-name
 ```
-## 28.docker restart - Restart one or more containers
+# 28.docker restart - Restart one or more containers
 
 ```bash
 docker restart <container>
 ```
-## 29.docker rm - Remove one or more containers
+# 29.docker rm - Remove one or more containers
 
 ```bash
 docker rm <container>
@@ -170,84 +170,93 @@ docker rm $(docker ps -aq)
 ```bash
 docker rmi <image>
 ```
-## 32.docker run - Run a command in a new container
+# 32.docker run - Run a command in a new container
 
 ```bash
 docker run -d -p 80:80 --name my-nginx nginx
 ```
-## 33.docker save - Save one or more images to a tar archive
+# 33.docker save - Save one or more images to a tar archive
 
 ```bash
 docker save -o image.tar <image>
 ```
-## 34.docker search - Search Docker Hub for images
+# 34.docker search - Search Docker Hub for images
 
 ```bash
 docker search nginx
 ```
-## 35.docker start - Start one or more stopped containers
+# 35.docker start - Start one or more stopped containers
 
 ```bash
 docker start <container>
 ```
-## 36.docker stats - Display a live stream of container(s) resource usage statistics
+# 36.docker stats - Display a live stream of container(s) resource usage statistics
 
 ```bash
 docker stats
 ```
-## 37.docker stop - Stop one or more running containers
+# 37.docker stop - Stop one or more running containers
 
 ```bash
 docker stop <container>
 ```
-T
-docker tag - Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
 
-bash
+# 38.docker tag - Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+
+```bash
 docker tag my-image:latest my-registry/my-image:v1.0
-docker top - Display the running processes of a container
+```
+# 39.docker top - Display the running processes of a container
 
-bash
+```bash
 docker top <container>
-U
-docker unpause - Unpause all processes within one or more containers
+```
+# 40.docker unpause - Unpause all processes within one or more containers
 
-bash
+```bash
 docker unpause <container>
-docker update - Update configuration of one or more containers
+```
+#  41.docker update - Update configuration of one or more containers
 
-bash
+```bash
 docker update --memory 512m <container>
-V
-docker version - Show the Docker version information
+```
+# 42.docker version - Show the Docker version information
 
-bash
+```bash
 docker version
-docker volume - Manage volumes
+```
+# 43.docker volume - Manage volumes
 
-bash
+```bash
 docker volume ls
 docker volume create my-volume
-W
-docker wait - Block until one or more containers stop, then print their exit codes
+```
 
-bash
+# 44.docker wait - Block until one or more containers stop, then print their exit codes
+
+```bash
 docker wait <container>
-Common Command Combinations
-Container Management
-bash
+```
+# Common Command Combinations
+# Container Management
+-----------------------
 # Run a container in detached mode
+```bash
 docker run -d --name my-container -p 8080:80 nginx
-
+```
 # Run a container interactively
+```bash
 docker run -it ubuntu bash
-
+```
 # Execute command in running container
+```bash
 docker exec -it my-container bash
-
+```
 # View logs
+```bash
 docker logs -f my-container
-
+```
 # Stop and remove container
 docker stop my-container && docker rm my-container
 Image Management
