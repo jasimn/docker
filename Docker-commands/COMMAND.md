@@ -8,7 +8,6 @@
 | `docker logout`  | Log out from a Docker registry  |
 | `docker help`    | Show help for any command       |
  --------------
---------------------------------
  
 # 1.docker attach - Attach local standard input/output to a running container
 
@@ -258,31 +257,44 @@ docker exec -it my-container bash
 docker logs -f my-container
 ```
 # Stop and remove container
+```bash
 docker stop my-container && docker rm my-container
-Image Management
-bash
+```
+# Image Management
 # Build image with tag
+```bash
 docker build -t my-app:latest .
+```
 
 # List images
+```bash
 docker images
+```
 
 # Remove unused images
+```bash
 docker image prune
-
+```
 # Remove all images
+```bash
 docker rmi $(docker images -q)
-System Cleanup
-bash
+```
+# System Cleanup
+
 # Remove all stopped containers
+```bash
 docker container prune
-
+```
 # Remove all unused networks
+```
 docker network prune
-
+```
 # Remove all unused volumes
+```bash
 docker volume prune
-
+```
 # Remove all unused images, containers, networks
+```bash
 docker system prune
-
+```
+-----------------------------------------------
