@@ -1,0 +1,21 @@
+name: Gitleaks Secret Detection
+
+on: [pull_request, push, workflow_dispatch]
+
+jobs:
+  gitleaks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        # Fetch depth 0 is required for gitleaks to scan the entire history
+        with:
+          fetch-depth: 0 
+
+      - name: Run Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Optional: GITLEAKS_LICENSE is only required for organizations/enterprises
+          # GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }} 
+
